@@ -49,7 +49,7 @@ export class TodoListItem extends React.Component<TodoListItemProps> {
         );
     }
 
-    
+
 
 
 
@@ -67,7 +67,7 @@ export class TodoListItem extends React.Component<TodoListItemProps> {
             <Alert show={this.show_} onClose={() => this.handleClose()} variant={"info"} dismissible>
                 <Alert.Heading>Task: {this.props.todo.task}</Alert.Heading>
                 <p>
-                    Description: {this.props.todo.description}
+                    Description: {this.props.todo.description.split("\n").map(text => <div>{text}</div>)}
                 </p>
                 <p>
                     Status: <span style={{ fontSize: '14px', color: this.props.todo.isComplete ? 'green' : 'red' }} className={'glyphicon glyphicon-' + (this.props.todo.isComplete ? 'ok-sign' : 'remove-sign')}></span>
