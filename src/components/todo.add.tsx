@@ -31,7 +31,7 @@ export class TodoAdd extends React.Component<TodoAddProps> {
 
     render() {
         return (
-            <div>
+            <div style={{ marginBottom: "30px" }}>
                 <Form>
                     <Form.Group controlId="NewTask">
                         <Form.Label>New Task</Form.Label>
