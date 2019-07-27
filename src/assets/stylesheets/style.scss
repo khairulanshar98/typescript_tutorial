@@ -1,0 +1,12 @@
+/*partial and import*/
+@import '_bootstrap.scss';
+@import 'font-awesome.scss';
+
+.title {
+    font-size: 48pt;
+    margin-bottom: 50px;
+}
+
+.show {
+    opacity: 1 !important;
+}
