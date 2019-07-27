@@ -10,7 +10,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js']
     },
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: path.join(__dirname, '/docs'),
         filename: 'js/bundle.min.js',
         chunkFilename: 'js/vendor.bundle.js',
     },
@@ -21,7 +21,7 @@ module.exports = {
     },
     devServer: {
         inline: true,
-        contentBase: path.resolve(__dirname, '../dist'),
+        contentBase: path.resolve(__dirname, '../docs'),
         port: 3000,
         disableHostCheck: true
     },
@@ -65,7 +65,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            path: path.resolve(__dirname, '/dist'),
+            path: path.resolve(__dirname, '/docs'),
             filename: "css/index.css",
             chunkFilename: "css/vendor.css"
         }),
