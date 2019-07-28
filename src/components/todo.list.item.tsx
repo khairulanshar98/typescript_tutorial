@@ -66,9 +66,9 @@ export class TodoListItem extends React.Component<TodoListItemProps> {
         return (
             <Alert show={this.show_} onClose={() => this.handleClose()} variant={"info"} dismissible>
                 <Alert.Heading>Task: {this.props.todo.task}</Alert.Heading>
-                <p>
-                    Description: {this.props.todo.description.split("\n").map(text => <div>{text}</div>)}
-                </p>
+                <div>
+                    Description: {this.props.todo.description.split("\n").map((text, idx) => <p key={idx}>{text}</p>)}
+                </div>
                 <p>
                     Status: <span style={{ fontSize: '14px', color: this.props.todo.isComplete ? 'green' : 'red' }} className={'glyphicon glyphicon-' + (this.props.todo.isComplete ? 'ok-sign' : 'remove-sign')}></span>
                 </p>
